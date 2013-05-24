@@ -1,0 +1,27 @@
+<%
+f = taglib("/lib/form")
+f.entry(:title => "The Python version", :field => "version") do
+  f.textbox(:default => "2.7.5")
+end
+f.advanced do
+  f.entry(:title => "Ignore local version", :field => "ignore_local_version") do
+    f.checkbox(:default => false)
+  end
+end
+f.entry(:title => "Preinstall pip list", :field => "pip_list") do
+  f.textbox(:default => "tox")
+end
+f.advanced do
+  f.entry(:title => "PYENV_ROOT", :field => "pyenv_root") do
+    f.textbox(:default => "$HOME/.pyenv")
+  end
+  f.entry(:title => "pyenv.git", :field => "pyenv_repository") do
+    f.textbox(:default => "git://github.com/yyuu/pyenv.git")
+  end
+  f.advanced do
+    f.entry(:title => "branch", :field => "pyenv_revision") do
+      f.textbox(:default => "master")
+    end
+  end
+end
+%>
