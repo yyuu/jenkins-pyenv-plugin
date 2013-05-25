@@ -14,17 +14,17 @@
 
 Follow these steps if you are interested in hacking on the plugin.
 
-Find a version of JRuby to install via `pyenv-install -l`
+Find a version of JRuby to install via `rbenv-install -l`
 
 Install JRuby
 
-    pyenv install jruby-1.6.7
-    pyenv local jruby-1.6.7
+    rbenv install jruby-1.6.7
+    rbenv local jruby-1.6.7
 
 Install the jpi gem
 
     gem install jpi
-    pyenv rehash
+    rbenv rehash
 
 Build the plugin
 
